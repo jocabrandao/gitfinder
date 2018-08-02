@@ -3,9 +3,9 @@ Reference application of Swift usage for an iOS application where the context is
 
 ## Start
 
-Para desenvolver este pequeno aplicativo de demonstração, suas telas foram projetadas antecipadamente ao início do desenvolvimento utilizando a ferramenta "Sketch", cujo seus arquivos podem ser encontrados na pasta "prototype" deste repositório.
+In order to develop this small demo application, its screens were designed in advance at the beginning of development using the "Sketch" tool, whose files can be found in the "prototype" folder of this repository.
 
-Caso não tenha o Sketch (a versão trial) pode abrir os arquivos, ou em último caso, na pasta "screenshots" encontrará as images.
+If you do not have the Sketch (the trial version) you can open the files, or in the latter case, in the "screenshots" folder you will find the images.
 
 ### Requirements
 
