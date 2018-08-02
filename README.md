@@ -60,5 +60,5 @@ $ git clone git@github.com:jocabrandao/gitfinder.git
 ## Author
 
 * **João Carlos Brandão Morgado**
-* [joaobrandao](https://github.com/jocabrandao)
+* [GitHub](https://github.com/jocabrandao)
 * [LinkedIn](https://www.linkedin.com/in/jcbrandao/)
