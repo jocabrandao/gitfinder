@@ -43,7 +43,7 @@ struct SearchVM {
                 switch result {
                 case .success(let developers):
                     self.ds?.data.value = developers.users
-                    completion?(Result.success(true))
+                    completion?(Result.success(developers.total > 0))
                     break
                 case .failure(let error):
                     print("[SearchVM -> SearchByUser] Error: \(error)")

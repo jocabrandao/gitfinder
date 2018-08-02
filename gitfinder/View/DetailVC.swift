@@ -28,6 +28,8 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presentLoadingView(true)
+        self.presentEmptyMessage(true)
         
         self.vm.loadUserProfile { _ in
 
@@ -43,6 +45,8 @@ class DetailVC: UIViewController {
                 DispatchQueue.main.async {
                     self.followersTV.dataSource = self.dsFollowers
                     self.followersTV.reloadData()
+                    self.presentEmptyMessage(false)
+                    self.presentLoadingView(false)
                 }
 
             })
@@ -55,4 +59,16 @@ class DetailVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
+    private func presentEmptyMessage(_ status: Bool) {
+        
+        if status == true {
+            self.noFollowersMsg.isHidden = false
+            self.followersTV.isHidden = true
+        } else {
+            self.noFollowersMsg.isHidden = true
+            self.followersTV.isHidden = false
+        }
+        
+    }
+    
 }

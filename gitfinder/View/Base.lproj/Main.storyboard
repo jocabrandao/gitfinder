@@ -52,6 +52,17 @@
                                             <constraint firstItem="kLz-Xa-pBe" firstAttribute="centerX" secondItem="owh-78-Hiw" secondAttribute="centerX" id="oIh-dy-wBf"/>
                                             <constraint firstItem="kLz-Xa-pBe" firstAttribute="top" secondItem="owh-78-Hiw" secondAttribute="top" constant="40" id="ryE-MI-e24"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.5" height="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-TG-uTL">
                                         <rect key="frame" x="25" y="110" width="325" height="45"/>
@@ -62,6 +73,14 @@
                                         <color key="textColor" red="0.56078431370000004" green="0.5568627451" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="searchTxtEditing:" destination="BYZ-38-t0r" eventType="editingChanged" id="1RM-nT-wq5"/>
                                         </connections>
@@ -73,20 +92,6 @@
                                             <action selector="searchBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e40-5n-nf7"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LII-IR-RxU" userLabel="Empty Search">
-                                        <rect key="frame" x="0.0" y="155" width="375" height="512"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="search-someone-msg" translatesAutoresizingMaskIntoConstraints="NO" id="hED-NU-cgL">
-                                                <rect key="frame" x="33.5" y="16" width="308" height="480"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="hED-NU-cgL" firstAttribute="top" secondItem="LII-IR-RxU" secondAttribute="top" constant="16" id="HsT-IO-iLK"/>
-                                            <constraint firstAttribute="bottom" secondItem="hED-NU-cgL" secondAttribute="bottom" constant="16" id="SGN-Og-EfW"/>
-                                            <constraint firstItem="hED-NU-cgL" firstAttribute="centerX" secondItem="LII-IR-RxU" secondAttribute="centerX" id="iDT-wY-I2g"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHd-o5-btN" userLabel="Search">
                                         <rect key="frame" x="0.0" y="185" width="375" height="482"/>
                                         <subviews>
@@ -144,6 +149,20 @@
                                             <constraint firstAttribute="trailing" secondItem="Knx-kT-dot" secondAttribute="trailing" id="z8d-1F-qAP"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LII-IR-RxU" userLabel="Empty Search">
+                                        <rect key="frame" x="0.0" y="155" width="375" height="512"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="search-someone-msg" translatesAutoresizingMaskIntoConstraints="NO" id="hED-NU-cgL">
+                                                <rect key="frame" x="33.5" y="16" width="308" height="480"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="hED-NU-cgL" firstAttribute="top" secondItem="LII-IR-RxU" secondAttribute="top" constant="16" id="HsT-IO-iLK"/>
+                                            <constraint firstAttribute="bottom" secondItem="hED-NU-cgL" secondAttribute="bottom" constant="16" id="SGN-Og-EfW"/>
+                                            <constraint firstItem="hED-NU-cgL" firstAttribute="centerX" secondItem="LII-IR-RxU" secondAttribute="centerX" id="iDT-wY-I2g"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -179,6 +198,7 @@
                     <navigationItem key="navigationItem" id="lcm-LO-HBz"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="emptySearchMsg" destination="LII-IR-RxU" id="ouY-eh-L19"/>
                         <outlet property="searchBtn" destination="YYt-xo-wVy" id="ahS-ev-leX"/>
                         <outlet property="searchTxt" destination="G0u-TG-uTL" id="4Ij-78-bNs"/>
                         <outlet property="usersTV" destination="Knx-kT-dot" id="ZYd-gh-8Di"/>
@@ -224,6 +244,17 @@
                                     <constraint firstItem="yYe-j5-5AB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7IA-pi-CFo" secondAttribute="leading" constant="10" id="dz9-5y-CIE"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yYe-j5-5AB" secondAttribute="trailing" constant="10" id="mJf-Uo-1Hw"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.5" height="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k6z-gK-sEW">
                                 <rect key="frame" x="60" y="120" width="255" height="200.5"/>
@@ -255,32 +286,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jU7-Ho-RYq" userLabel="Empty Followers">
-                                <rect key="frame" x="0.0" y="340.5" width="375" height="326.5"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4n-Rk-mWS">
-                                        <rect key="frame" x="39" y="0.0" width="296" height="1"/>
-                                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="MW2-ym-aDL"/>
-                                            <constraint firstAttribute="width" constant="296" id="g61-au-SuU"/>
-                                        </constraints>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-followers-msg" translatesAutoresizingMaskIntoConstraints="NO" id="IPO-fl-kp1">
-                                        <rect key="frame" x="96.5" y="102.5" width="182" height="123"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="123" id="5s8-U0-d0F"/>
-                                            <constraint firstAttribute="width" constant="182" id="ual-zh-HIH"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="IPO-fl-kp1" firstAttribute="centerY" secondItem="jU7-Ho-RYq" secondAttribute="centerY" id="A6w-s0-nZT"/>
-                                    <constraint firstItem="R4n-Rk-mWS" firstAttribute="top" secondItem="jU7-Ho-RYq" secondAttribute="top" id="dG2-aa-9up"/>
-                                    <constraint firstItem="IPO-fl-kp1" firstAttribute="centerX" secondItem="jU7-Ho-RYq" secondAttribute="centerX" id="ePk-Ci-wTA"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2x-MO-wFd" userLabel="Followers">
                                 <rect key="frame" x="0.0" y="320.5" width="375" height="346.5"/>
                                 <subviews>
@@ -359,6 +364,32 @@
                                     <constraint firstItem="3jM-1i-9LS" firstAttribute="top" secondItem="k2x-MO-wFd" secondAttribute="top" id="WQl-0h-TwV"/>
                                     <constraint firstItem="kNJ-eX-3G2" firstAttribute="top" secondItem="3jM-1i-9LS" secondAttribute="bottom" id="d5c-3Y-3qA"/>
                                     <constraint firstItem="3jM-1i-9LS" firstAttribute="leading" secondItem="k2x-MO-wFd" secondAttribute="leading" id="kyQ-Cf-Emb"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jU7-Ho-RYq" userLabel="Empty Followers">
+                                <rect key="frame" x="0.0" y="340" width="375" height="326.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4n-Rk-mWS">
+                                        <rect key="frame" x="39" y="0.0" width="296" height="1"/>
+                                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="MW2-ym-aDL"/>
+                                            <constraint firstAttribute="width" constant="296" id="g61-au-SuU"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-followers-msg" translatesAutoresizingMaskIntoConstraints="NO" id="IPO-fl-kp1">
+                                        <rect key="frame" x="96.5" y="102.5" width="182" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="123" id="5s8-U0-d0F"/>
+                                            <constraint firstAttribute="width" constant="182" id="ual-zh-HIH"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="IPO-fl-kp1" firstAttribute="centerY" secondItem="jU7-Ho-RYq" secondAttribute="centerY" id="A6w-s0-nZT"/>
+                                    <constraint firstItem="R4n-Rk-mWS" firstAttribute="top" secondItem="jU7-Ho-RYq" secondAttribute="top" id="dG2-aa-9up"/>
+                                    <constraint firstItem="IPO-fl-kp1" firstAttribute="centerX" secondItem="jU7-Ho-RYq" secondAttribute="centerX" id="ePk-Ci-wTA"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -49,8 +49,9 @@ final class GitHubService: RequestHandler, GitHubServiceProtocol {
       
         let taskKey = "searchByUserTaskKey"
         self.cancelPreviusRequest(forTaskKey: taskKey)
+        let criteriaTrimmed = criteria.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        let urlSearch = "\(BASE_URL_SEARCH_USER_GIT)\(criteria)"
+        let urlSearch = "\(BASE_URL_SEARCH_USER_GIT)\(criteriaTrimmed)"
 
         let task = RequestService().loadData(urlString: urlSearch, completion: networkResult(completion: completion))
         tasks[taskKey] = task
