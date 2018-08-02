@@ -9,6 +9,10 @@
 import UIKit
 
 extension UIViewController {
+    
+    /// Custom loading view
+    ///
+    /// - Parameter status: true to show or false to hide
     func presentLoadingView(_ status: Bool) {
         var fadeView : UIView?
         
@@ -45,4 +49,16 @@ extension UIViewController {
             }
         }
     }
+    
+    /// Handler for hide the keyboard when tapped out of the edition area
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
 }

@@ -25,13 +25,10 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
         searchedSomeone = false
         self.presentEmptyMessage(true)
-        
-        
-//        let tap = UIGestureRecognizer(target: self, action: #selector(SearchVC.handleTap))
-//        view.addGestureRecognizer(tap)
-
     }
 
     @IBAction func searchTxtEditing(_ sender: Any) {
@@ -117,9 +114,5 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
         }
 
     }
-    
-//    @objc func handleTap() {
-//        view.endEditing(true)
-//    }
-    
+
 }
