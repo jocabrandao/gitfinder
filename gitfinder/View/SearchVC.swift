@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchVC: UIViewController, UITableViewDelegate, Alertable {
+class SearchVC: UIViewController, UITableViewDelegate, UITextFieldDelegate, Alertable {
 
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var searchTxt: UITextField!
@@ -25,6 +25,8 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchTxt.delegate = self
+        
         self.hideKeyboardWhenTappedAround()
         
         searchedSomeone = false
@@ -34,6 +36,9 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
     @IBAction func searchTxtEditing(_ sender: Any) {
         if searchTxt.text == "" {
             searchBtn.setImage(UIImage(named: "search-button-disabled"), for: .normal)
+            self.usersTV.dataSource = nil
+            self.usersTV.reloadData()
+            self.presentEmptyMessage(true)
             searchedSomeone = false
         } else {
             searchBtn.setImage(UIImage(named: "search-button-enabled"), for: .normal)
@@ -101,6 +106,12 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
                 targetVC.selectedUser = ds.data.value[index]
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.searchTxt.resignFirstResponder()
+        searchBtnTapped(self)
+        return true
     }
     
     private func presentEmptyMessage(_ status: Bool) {

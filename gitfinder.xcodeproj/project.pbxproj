@@ -191,9 +191,9 @@
 				C00543D62110DA6100963A16 /* SearchTVC.swift */,
 				C00543D82110DAA300963A16 /* FollowersTVC.swift */,
 				C00543FD2112161E00963A16 /* CircleIV.swift */,
+				C005441121138B8B00963A16 /* UIExtensions.swift */,
 				C00543A52110A59000963A16 /* Main.storyboard */,
 				C00543AA2110A59200963A16 /* LaunchScreen.storyboard */,
-				C005441121138B8B00963A16 /* UIExtensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
