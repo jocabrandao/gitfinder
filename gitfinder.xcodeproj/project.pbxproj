@@ -35,6 +35,8 @@
 		C00544082113042300963A16 /* DetailDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00544072113042300963A16 /* DetailDS.swift */; };
 		C005440A211310A700963A16 /* FollowersDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0054409211310A700963A16 /* FollowersDS.swift */; };
 		C005440C21132CFC00963A16 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005440B21132CFC00963A16 /* Follower.swift */; };
+		C00544102113812200963A16 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005440F2113812100963A16 /* Alertable.swift */; };
+		C005441221138B8B00963A16 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005441121138B8B00963A16 /* UIExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		C00544072113042300963A16 /* DetailDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDS.swift; sourceTree = "<group>"; };
 		C0054409211310A700963A16 /* FollowersDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersDS.swift; sourceTree = "<group>"; };
 		C005440B21132CFC00963A16 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		C005440F2113812100963A16 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		C005441121138B8B00963A16 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 		C00543D02110D70600963A16 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C005440F2113812100963A16 /* Alertable.swift */,
 				C00543D22110D9B400963A16 /* SearchVC.swift */,
 				C00543D42110D9C400963A16 /* DetailVC.swift */,
 				C00543D62110DA6100963A16 /* SearchTVC.swift */,
@@ -188,6 +193,7 @@
 				C00543FD2112161E00963A16 /* CircleIV.swift */,
 				C00543A52110A59000963A16 /* Main.storyboard */,
 				C00543AA2110A59200963A16 /* LaunchScreen.storyboard */,
+				C005441121138B8B00963A16 /* UIExtensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,7 +403,9 @@
 				C00543DD2110DBC600963A16 /* Parser.swift in Sources */,
 				C005440A211310A700963A16 /* FollowersDS.swift in Sources */,
 				C00543D52110D9C400963A16 /* DetailVC.swift in Sources */,
+				C00544102113812200963A16 /* Alertable.swift in Sources */,
 				C00543F0211103F500963A16 /* Developers.swift in Sources */,
+				C005441221138B8B00963A16 /* UIExtensions.swift in Sources */,
 				C00543EC2110FF8000963A16 /* GitHubService.swift in Sources */,
 				C00543DF2110E73800963A16 /* Result.swift in Sources */,
 				C00543EA2110F2C200963A16 /* RequestHandler.swift in Sources */,

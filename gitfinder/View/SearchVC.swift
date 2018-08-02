@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchVC: UIViewController, UITableViewDelegate {
+class SearchVC: UIViewController, UITableViewDelegate, Alertable {
 
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var searchTxt: UITextField!
@@ -16,7 +16,7 @@ class SearchVC: UIViewController, UITableViewDelegate {
     
     var searchedSomeone = false
     
-    let ds = SearchDS()
+    var ds = SearchDS()
     lazy var vm : SearchVM = {
         let viewModel = SearchVM(searchCriteria: searchTxt.text!, datasource: ds)
         return viewModel
@@ -53,12 +53,29 @@ class SearchVC: UIViewController, UITableViewDelegate {
             
         } else if searchTxt.text != "" {
             searchBtn.setImage(UIImage(named: "search-button-clean"), for: .normal)
-
+            
+            self.presentLoadingView(true)
             self.vm.searchCriteria = searchTxt.text
-            self.vm.searchByUser { _ in
-                self.usersTV.dataSource = self.ds
-                self.usersTV.delegate = self
-                self.usersTV.reloadData()
+            self.vm.searchByUser { (result) in
+
+                switch result {
+                case .success(let hasResult):
+                    if hasResult {
+                        self.usersTV.dataSource = self.ds
+                        self.usersTV.delegate = self
+                        self.usersTV.reloadData()
+                        self.presentLoadingView(false)
+                    } else {
+                        self.showAlert(title: "Sorry!", "I could not find anything with the search criteria.")
+                        self.presentLoadingView(false)
+                    }
+                    break
+                case .failure:
+                    self.showAlert(title: "Error", "Sorry, search is unavailable.")
+                    self.presentLoadingView(false)
+                    break
+                }
+                
             }
             
             searchedSomeone = true

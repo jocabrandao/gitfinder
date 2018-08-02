@@ -28,6 +28,7 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presentLoadingView(true)
         
         self.vm.loadUserProfile { _ in
 
@@ -43,6 +44,7 @@ class DetailVC: UIViewController {
                 DispatchQueue.main.async {
                     self.followersTV.dataSource = self.dsFollowers
                     self.followersTV.reloadData()
+                    self.presentLoadingView(false)
                 }
 
             })
