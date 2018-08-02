@@ -13,6 +13,7 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var searchTxt: UITextField!
     @IBOutlet weak var usersTV: UITableView!
+    @IBOutlet weak var emptySearchMsg: UIView!
     
     var searchedSomeone = false
     
@@ -25,6 +26,8 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchedSomeone = false
+        self.presentEmptyMessage(true)
+        
         
 //        let tap = UIGestureRecognizer(target: self, action: #selector(SearchVC.handleTap))
 //        view.addGestureRecognizer(tap)
@@ -48,6 +51,7 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
             
             self.usersTV.dataSource = nil
             self.usersTV.reloadData()
+            self.presentEmptyMessage(true)
             
             searchedSomeone = false
             
@@ -64,14 +68,17 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
                         self.usersTV.dataSource = self.ds
                         self.usersTV.delegate = self
                         self.usersTV.reloadData()
+                        self.presentEmptyMessage(false)
                         self.presentLoadingView(false)
                     } else {
                         self.showAlert(title: "Sorry!", "I could not find anything with the search criteria.")
+                        self.presentEmptyMessage(true)
                         self.presentLoadingView(false)
                     }
                     break
                 case .failure:
                     self.showAlert(title: "Error", "Sorry, search is unavailable.")
+                    self.presentEmptyMessage(true)
                     self.presentLoadingView(false)
                     break
                 }
@@ -97,6 +104,18 @@ class SearchVC: UIViewController, UITableViewDelegate, Alertable {
                 targetVC.selectedUser = ds.data.value[index]
             }
         }
+    }
+    
+    private func presentEmptyMessage(_ status: Bool) {
+        
+        if status == true {
+            self.emptySearchMsg.isHidden = false
+            self.usersTV.isHidden = true
+        } else {
+            self.emptySearchMsg.isHidden = true
+            self.usersTV.isHidden = false
+        }
+
     }
     
 //    @objc func handleTap() {
