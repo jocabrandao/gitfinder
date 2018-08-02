@@ -63,8 +63,9 @@ final class Parser {
     static func toObject<T: Parceable>(data: Data, completion: (Result<T, ErrorResult>) -> Void) {
         
         do {
+        
             if let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String : AnyObject] {
-                
+
                 // foreach item check if the dictionary is parseable with the class that implement Parceable protocol
                 switch T.parseToObject(dictionary: dictionary) {
                 case .failure(let error):
@@ -74,7 +75,7 @@ final class Parser {
                     completion(.success(newModel))
                     break
                 }
-                
+
             } else {
                 // not an array
                 completion(.failure(.parser(string: "Json data is not an array")))

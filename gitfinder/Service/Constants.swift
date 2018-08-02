@@ -8,4 +8,7 @@
 
 import Foundation
 
-let URL_FIND_USER_GIT = "https://api.github.com/search/users?q=tom+repos:%3E42+followers:%3E1000";
+let BASE_URL_SEARCH_USER_GIT = "https://api.github.com/search/users?in:login+in:fullname+in:email&q="
+let BASE_URL_LOAD_USER_GIT = "https://api.github.com/users/"
+
+let SEGUE_DETAIL_VC = "DetailVC"

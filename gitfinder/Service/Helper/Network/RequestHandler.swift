@@ -10,6 +10,9 @@ import Foundation
 
 class RequestHandler {
     
+    /// Handler an http response for generate an array of objects as an expected result
+    ///
+    /// - Parameter completion: Closure with parsed data or error, if happened
     func networkResult<T: Parceable>(completion: @escaping ((Result<[T], ErrorResult>) -> Void)) ->
         ((Result<Data, ErrorResult>) -> Void) {
             
@@ -29,6 +32,9 @@ class RequestHandler {
             }
     }
     
+    /// Handler an http response for generate an objects as an expected result
+    ///
+    /// - Parameter completion: Closure with parsed data or error, if happened
     func networkResult<T: Parceable>(completion: @escaping ((Result<T, ErrorResult>) -> Void)) ->
         ((Result<Data, ErrorResult>) -> Void) {
             

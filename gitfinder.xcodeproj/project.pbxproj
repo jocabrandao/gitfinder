@@ -26,6 +26,15 @@
 		C00543EE2111009400963A16 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00543ED2111009400963A16 /* User.swift */; };
 		C00543F0211103F500963A16 /* Developers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00543EF211103F500963A16 /* Developers.swift */; };
 		C00543F221110B2800963A16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00543F121110B2800963A16 /* Constants.swift */; };
+		C00543F42111AD5600963A16 /* SearchDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00543F32111AD5600963A16 /* SearchDS.swift */; };
+		C00543F62111AD9800963A16 /* GenericDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00543F52111AD9800963A16 /* GenericDS.swift */; };
+		C00543F82111AE1800963A16 /* GenericValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00543F72111AE1800963A16 /* GenericValue.swift */; };
+		C00543FA2111BEAB00963A16 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00543F92111BEAB00963A16 /* SearchVM.swift */; };
+		C00543FE2112161E00963A16 /* CircleIV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00543FD2112161E00963A16 /* CircleIV.swift */; };
+		C00544062112FA8E00963A16 /* DetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00544052112FA8E00963A16 /* DetailVM.swift */; };
+		C00544082113042300963A16 /* DetailDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00544072113042300963A16 /* DetailDS.swift */; };
+		C005440A211310A700963A16 /* FollowersDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0054409211310A700963A16 /* FollowersDS.swift */; };
+		C005440C21132CFC00963A16 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005440B21132CFC00963A16 /* Follower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +80,15 @@
 		C00543ED2111009400963A16 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C00543EF211103F500963A16 /* Developers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developers.swift; sourceTree = "<group>"; };
 		C00543F121110B2800963A16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C00543F32111AD5600963A16 /* SearchDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDS.swift; sourceTree = "<group>"; };
+		C00543F52111AD9800963A16 /* GenericDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDS.swift; sourceTree = "<group>"; };
+		C00543F72111AE1800963A16 /* GenericValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericValue.swift; sourceTree = "<group>"; };
+		C00543F92111BEAB00963A16 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
+		C00543FD2112161E00963A16 /* CircleIV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleIV.swift; sourceTree = "<group>"; };
+		C00544052112FA8E00963A16 /* DetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVM.swift; sourceTree = "<group>"; };
+		C00544072113042300963A16 /* DetailDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDS.swift; sourceTree = "<group>"; };
+		C0054409211310A700963A16 /* FollowersDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersDS.swift; sourceTree = "<group>"; };
+		C005440B21132CFC00963A16 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +144,7 @@
 				C00543D02110D70600963A16 /* View */,
 				C00543CF2110D6F000963A16 /* ViewModel */,
 				C00543A12110A59000963A16 /* AppDelegate.swift */,
-				C00543A52110A59000963A16 /* Main.storyboard */,
 				C00543A82110A59200963A16 /* Assets.xcassets */,
-				C00543AA2110A59200963A16 /* LaunchScreen.storyboard */,
 				C00543AD2110A59200963A16 /* Info.plist */,
 			);
 			path = gitfinder;
@@ -155,6 +171,9 @@
 		C00543CF2110D6F000963A16 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C005440221122DA300963A16 /* Datasource */,
+				C00543F92111BEAB00963A16 /* SearchVM.swift */,
+				C00544052112FA8E00963A16 /* DetailVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -166,6 +185,9 @@
 				C00543D42110D9C400963A16 /* DetailVC.swift */,
 				C00543D62110DA6100963A16 /* SearchTVC.swift */,
 				C00543D82110DAA300963A16 /* FollowersTVC.swift */,
+				C00543FD2112161E00963A16 /* CircleIV.swift */,
+				C00543A52110A59000963A16 /* Main.storyboard */,
+				C00543AA2110A59200963A16 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +197,8 @@
 			children = (
 				C00543ED2111009400963A16 /* User.swift */,
 				C00543EF211103F500963A16 /* Developers.swift */,
+				C00543F72111AE1800963A16 /* GenericValue.swift */,
+				C005440B21132CFC00963A16 /* Follower.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +247,17 @@
 				C00543E92110F2C200963A16 /* RequestHandler.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C005440221122DA300963A16 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				C00543F32111AD5600963A16 /* SearchDS.swift */,
+				C00543F52111AD9800963A16 /* GenericDS.swift */,
+				C00544072113042300963A16 /* DetailDS.swift */,
+				C0054409211310A700963A16 /* FollowersDS.swift */,
+			);
+			path = Datasource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,16 +395,25 @@
 				C00543E82110F02000963A16 /* RequestService.swift in Sources */,
 				C00543D32110D9B400963A16 /* SearchVC.swift in Sources */,
 				C00543DD2110DBC600963A16 /* Parser.swift in Sources */,
+				C005440A211310A700963A16 /* FollowersDS.swift in Sources */,
 				C00543D52110D9C400963A16 /* DetailVC.swift in Sources */,
 				C00543F0211103F500963A16 /* Developers.swift in Sources */,
 				C00543EC2110FF8000963A16 /* GitHubService.swift in Sources */,
 				C00543DF2110E73800963A16 /* Result.swift in Sources */,
 				C00543EA2110F2C200963A16 /* RequestHandler.swift in Sources */,
+				C00543F82111AE1800963A16 /* GenericValue.swift in Sources */,
+				C00543F42111AD5600963A16 /* SearchDS.swift in Sources */,
+				C005440C21132CFC00963A16 /* Follower.swift in Sources */,
 				C00543EE2111009400963A16 /* User.swift in Sources */,
+				C00543FA2111BEAB00963A16 /* SearchVM.swift in Sources */,
 				C00543E12110E8CB00963A16 /* ErrorResult.swift in Sources */,
 				C00543F221110B2800963A16 /* Constants.swift in Sources */,
 				C00543D92110DAA300963A16 /* FollowersTVC.swift in Sources */,
+				C00543FE2112161E00963A16 /* CircleIV.swift in Sources */,
+				C00543F62111AD9800963A16 /* GenericDS.swift in Sources */,
 				C00543A22110A59000963A16 /* AppDelegate.swift in Sources */,
+				C00544062112FA8E00963A16 /* DetailVM.swift in Sources */,
+				C00544082113042300963A16 /* DetailDS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

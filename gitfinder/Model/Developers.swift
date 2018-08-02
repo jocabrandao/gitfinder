@@ -8,12 +8,15 @@
 
 import Foundation
 
+/// Developers representation structure
 struct Developers {
     let total: Int
     let users: [User]
 }
 
+// MARK: - It makes the developers structure parcelable adopting the protocol
 extension Developers: Parceable {
+    
     static func parseToObject(dictionary: [String : AnyObject]) -> Result<Developers, ErrorResult> {
         if  let count = dictionary["total_count"] as? Int,
         let items = dictionary["items"] as? [Dictionary<String, Any>] {
@@ -22,8 +25,8 @@ extension Developers: Parceable {
             
             for user: Dictionary<String, Any> in items {
                 if  let login = user["login"] as? String,
-                    let avatarUrl = user["avatar_url"] {
-                    lstUser.append(User(username: login, email: "", avatarUrl: avatarUrl as! String, repositories: 0, followers: ))
+                    let avatarUrl = user["avatar_url"] as? String {
+                    lstUser.append(User(username: login, avatarUrl: avatarUrl))
                 }
             }
            
@@ -35,4 +38,5 @@ extension Developers: Parceable {
             return Result.failure(ErrorResult.parser(string: "There is no result with the expected contract to make the parser."))
         }
     }
+    
 }
